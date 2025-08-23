@@ -31,8 +31,10 @@ public class Main extends JFrame {
     }
 
     public void run() {
-      while(true) {
-        repaint();
-      }
+        while (true) {
+            repaint();
+        }
     }
+    
+    // boo
 }
