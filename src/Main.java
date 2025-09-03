@@ -35,6 +35,4 @@ public class Main extends JFrame {
             repaint();
         }
     }
-    
-    // boo
 }
