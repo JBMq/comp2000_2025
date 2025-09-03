@@ -9,6 +9,8 @@ public class Stage {
   Grid grid;
   List<Actor> actors;
 
+  //mine
+
   public Stage() {
     grid = new Grid();
     // actors = new ArrayList<Actor>();
