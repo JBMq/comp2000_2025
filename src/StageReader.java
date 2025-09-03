@@ -15,10 +15,21 @@ public class StageReader {
     for (String cur : lines) {
       int col = ((int) (cur.charAt(0))) - 65;
       int row = ((int) cur.charAt(1)) - 48;
+      String name;
+
+      if (cur.charAt(2) != '=') {
+        row = (((int) cur.charAt(1)) - 48) + (((int) cur.charAt(2)) - 48);
+        name = cur.substring(4);
+      } else {
+        row = ((int) cur.charAt(1)) - 48;
+        name = cur.substring(3);
+      }
+      
       System.out.println(col + " " + row);
       // int col = 2;
       // int row = 2;
-      String name = cur.substring(3);
+
+      
       if (name.compareTo("cat") == 0) {
         actors.add(new Cat(grid.cellAtColRow(col, row).get()));
       } else if (name.compareTo("dog") == 0) {
